@@ -10,8 +10,8 @@ env:
   image_name: oabot
   #tag: ${{ github.sha }}
   #tag: test
-  tag: 3978
-  #tag: latest
+  #tag: 3978
+  tag: latest
 
 jobs:
   # This workflow contains a job called "build"
