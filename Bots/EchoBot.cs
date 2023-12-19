@@ -27,6 +27,10 @@ namespace EchoBot.Bots
             string tokens = GetEnvironmentVariable("TOKENS_LIMIT");
             string deployment = GetEnvironmentVariable("DEPLOYMENT_MODEL");
 
+            string searchEndpoint = GetEnvironmentVariable("SEARCH_ENPOINT");
+            string searchKey = GetEnvironmentVariable("SEARCH_KEY");
+            string searchIndex = GetEnvironmentVariable("SEARCH_INDEX");
+
             OpenAIClient client = new(new Uri(endpoint), new AzureKeyCredential(key));
 
             var chatCompletionsOptions = new ChatCompletionsOptions()
@@ -35,6 +39,18 @@ namespace EchoBot.Bots
                 {
                     new ChatMessage(ChatRole.System, system),
                     new ChatMessage(ChatRole.User, turnContext.Activity.Text),
+                },
+                AzureExtensionsOptions = new AzureChatExtensionsOptions()
+                {
+                    Extensions =
+                    {
+                        new AzureCognitiveSearchChatExtensionConfiguration()
+                        {
+                            SearchEndpoint = new Uri(searchEndpoint),
+                            SearchKey = new AzureKeyCredential(searchKey),
+                            IndexName = searchIndex,
+                        },
+                    }
                 },
                 MaxTokens = int.Parse(tokens)
             };
