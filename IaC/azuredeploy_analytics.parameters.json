@@ -3,25 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "accountDataLakeName": {
-        "value": "GEN-UNIQUE"
+        "value": "devsquadoaisega"
       },
       "location": {
         "value": "eastus2"
       },
         "accountCognitiveSearchName": {
-        "value": "GEN-UNIQUE"
+        "value": "devsquadoaisega"
       },
          "serverName": {
-         "value": "GEN-UNIQUE"
+         "value": "devsquadoaisega"
       },
         "administratorLogin": {
-        "value": "GEN-UNIQUE"
+        "value": "devsquadoaisega"
       },
         "administratorLoginPassword": {
-        "value": "GEN-PASSWORD"
+        "value": "Sega12#$_2023"
       },
         "blobContainerName": {
-        "value": "yourowndata"
+        "value": "segadata"
       }
     }
 }
