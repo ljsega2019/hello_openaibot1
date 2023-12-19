@@ -7,11 +7,11 @@ env:
   AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
   AZURE_REGION: eastus
-  ACR_LOGINSERVER: ${{ secrets.CONTAINER_REGISTRY }}
+  ACR_LOGINSERVER: ${{ secrets.ACR_LOGINSERVER }}
   IMAGE_NAME: oabot
-  IMAGE_TAG: 3978
-  CONTAINER_APP_NAME: oabotyourdata001
-  CONTAINER_APP_ENV:  env-c4gxnd5jx4mf6
+  IMAGE_TAG: latest
+  CONTAINER_APP_NAME: oabotsegav2
+  CONTAINER_APP_ENV:  env-7oykkisacaqe2
 
 jobs:
   deploy-container-app:
